@@ -12,7 +12,6 @@ var server = require('http').createServer(app);
 
 
 
-
  
 //set the template engine ejs
 app.set('view engine', 'html')
