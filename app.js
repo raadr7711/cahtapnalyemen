@@ -14,7 +14,7 @@ var server = require('http').createServer(app);
 
  
 //set the template engine ejs
-app.set('view engine', 'html')
+app.set('view engine', 'ejs')
 
 //middlewares
 app.use(express.static('public'))
@@ -22,7 +22,7 @@ app.use(express.static('public'))
 
 //routes
 app.get('/', (req, res) => {
-	res.render('index.html')
+	res.render('index')
 })
 
 //Listen on port 3000
