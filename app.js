@@ -24,7 +24,7 @@ app.use(express.static('public'))
 app.get('/', (req, res) => {
 	res.render('index')
 })
-npm
+
 //Listen on port 3000
 server = app.listen(port)
 
