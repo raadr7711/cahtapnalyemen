@@ -3,10 +3,10 @@ var  app = express()
 var server = require('http').createServer(app);
  var port = process.env.PORT || 5000;
 
+console.log(`Listening on ${ port }`)
+var XMLHttpRequest = require("xhr");
 
-var XMLHttpRequest = require("xmlhttprequest");
-
- console.log(`Listening on ${ port }`)
+ 
 
 
 
