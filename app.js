@@ -50,9 +50,9 @@ io.on('connection', (socket) => {
     socket.on('msg', (ddata) => {
         //broadcast the new message
         io.sockets.emit('msg', {cmd : ddata.cmd, data: ddata.data});
-	    console.log(ddata.cmd)
+	    console.log(`cmd= ${ddata.cmd}`)
 	    
-console.log(ddata.data)
+console.log(`data ${ddata.data}`)
 
     })
 
@@ -60,14 +60,14 @@ console.log(ddata.data)
     socket.on('re', (ddata) => {
     	io.sockets.emit('re', {token : ddata.token})
 	    
-	    console.log(ddata.token)
+	    console.log(`token= ${ddata.token}`)
 
     })
 	
 	
 	socket.on('msg', (ddata) => {
     	io.sockets.emit('msg', {e: ddata.e})
-		console.log(ddata.e)
+		console.log(`e= ${ddata.e}`)
 
 		
     })
