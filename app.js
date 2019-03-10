@@ -60,8 +60,8 @@ io.on('connection', (socket) => {
     })
 	
 	
-	socket.on('msg', (data) => {
-    	io.sockets.emit('msg', {e: data.e})
+	socket.on('msg', (ddata) => {
+    	io.sockets.emit('msg', {e: ddata.e})
     })
 	
 })
