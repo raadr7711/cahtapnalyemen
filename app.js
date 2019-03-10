@@ -50,16 +50,26 @@ io.on('connection', (socket) => {
     socket.on('msg', (ddata) => {
         //broadcast the new message
         io.sockets.emit('msg', {cmd : ddata.cmd, data: ddata.data});
+	    console.log(ddata.cmd)
+	    
+console.log(ddata.data)
+
     })
 
     //listen on typing
     socket.on('re', (ddata) => {
     	io.sockets.emit('re', {token : ddata.token})
+	    
+	    console.log(ddata.token)
+
     })
 	
 	
 	socket.on('msg', (ddata) => {
     	io.sockets.emit('msg', {e: ddata.e})
+		console.log(ddata.e)
+
+		
     })
 	
 })
