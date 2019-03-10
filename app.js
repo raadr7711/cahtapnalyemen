@@ -49,14 +49,14 @@ io.on('connection', (socket) => {
     })
 
     //listen on new_message
-    socket.on('msg', (data) => {
+    socket.on('msg', (ddata) => {
         //broadcast the new message
-        io.sockets.emit('msg', {cmd : data.cmd, data: data.data});
+        io.sockets.emit('msg', {cmd : ddata.cmd, data: ddata.data});
     })
 
     //listen on typing
-    socket.on('re', (data) => {
-    	io.sockets.emit('re', {token : data.token})
+    socket.on('re', (ddata) => {
+    	io.sockets.emit('re', {token : ddata.token})
     })
 	
 	
