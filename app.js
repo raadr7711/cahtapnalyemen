@@ -1,10 +1,10 @@
 var express = require('express')
 var  app = express()
-var server = require('http').createServer(app)
- var port = process.env.PORT || 5000
+var server = require('http').createServer(app);
+ var port = process.env.PORT || 5000;
 
 
-var XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest
+var XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
 
  console.log(`Listening on ${ port }`)
 
