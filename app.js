@@ -5,7 +5,7 @@ var server = require('http').createServer(app);
 
 console.log(`Listening on ${ port }`)
 var XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
-var $ = var  jQuery = require('jquery')(window);
+var $ = require('jquery');
 function reqListener () { 
 	console.log(this.responseText);} 
 
