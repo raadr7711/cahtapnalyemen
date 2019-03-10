@@ -24,3 +24,9 @@
     "socket.io": "^2.0.4"
   }
 }
+
+{
+  "dependencies": {
+    "xhr2": "*"
+  }
+}
