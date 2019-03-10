@@ -4,7 +4,7 @@ var server = require('http').createServer(app);
  var port = process.env.PORT || 5000;
 
 
-var XMLHttpRequest = require("xmlhttprequest")
+var XMLHttpRequest = require("xmlhttprequest");
 
  console.log(`Listening on ${ port }`)
 
