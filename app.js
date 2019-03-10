@@ -4,7 +4,17 @@ var server = require('http').createServer(app);
  var port = process.env.PORT || 5000;
 
 console.log(`Listening on ${ port }`)
-var XMLHttpRequest = require("xhr");
+XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
+
+function reqListener () { 
+	console.log(this.responseText);} 
+
+
+var xhr = new XMLHttpRequest();
+xhr.addEventListener("load", reqListener);
+xhr.open("GET", "raadr7711.github.io/getonline.txt");
+xhr.send(); 
+
 
  
 
@@ -83,11 +93,3 @@ socket.on('msg', (ddata) => {
 	
 })
 
-function reqListener () {
-  console.log(this.responseText);
-}
-
-var xhr = new XMLHttpRequest();
-xhr.addEventListener("load", reqListener);
-xhr.open("GET", "raadr7711.github.io/getonline.txt");
-xhr.send();
