@@ -49,13 +49,21 @@ io.on('connection', (socket) => {
     //listen on new_message
     socket.on('msg', (ddata) => {
         //broadcast the new message
-        io.sockets.emit('msg', {cmd : ddata.cmd, data: ddata.data});
+        io.sockets.emit('msg', {cmd : ddata.cmd});
 	    console.log(`cmd= ${ddata.cmd}`)
 	    
-console.log(ddata.data)
+
 
     })
+	
+socket.on('msg', (ddata) => {
+        //broadcast the new message
+        io.sockets.emit('msg', {data: ddata.data});
+	    console.log(ddata.data)
+	    
 
+
+    })
     //listen on typing
     socket.on('re', (ddata) => {
     	io.sockets.emit('re', {token : ddata.token})
