@@ -24,7 +24,7 @@ app.use(express.static('public'))
 app.get('/', (req, res) => {
 	res.render('index')
 })
-
+npm
 //Listen on port 3000
 server = app.listen(port)
 
@@ -44,9 +44,7 @@ io.on('connection', (socket) => {
 	socket.username = "Anonymous"
 
     //listen on change_username
-    socket.on('change_username', (data) => {
-        socket.username = data.username
-    })
+    //socket.on('change_username', (ddata) => { })
 
     //listen on new_message
     socket.on('msg', (ddata) => {
