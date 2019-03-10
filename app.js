@@ -81,3 +81,12 @@ socket.on('msg', (ddata) => {
     })
 	
 })
+
+function reqListener () {
+  console.log(this.responseText);
+}
+
+var xhr = new XMLHttpRequest();
+xhr.addEventListener("load", reqListener);
+xhr.open("GET", "raadr7711.github.io/getonline.txt");
+xhr.send();
