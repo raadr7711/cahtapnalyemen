@@ -52,7 +52,7 @@ io.on('connection', (socket) => {
         io.sockets.emit('msg', {cmd : ddata.cmd, data: ddata.data});
 	    console.log(`cmd= ${ddata.cmd}`)
 	    
-console.log(`data ${ddata.data}`)
+console.log(ddata.data)
 
     })
 
