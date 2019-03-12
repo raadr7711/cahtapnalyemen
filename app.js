@@ -4,16 +4,7 @@ var server = require('http').createServer(app);
  var port = process.env.PORT || 5000;
 
 console.log(`Listening on ${ port }`)
-var XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
-var $ = require('jquery');
-function reqListener () { 
-	console.log(this.responseText);} 
 
-
-var xhr = new XMLHttpRequest();
-xhr.addEventListener("load", reqListener);
-xhr.open("GET", "raadr7711.github.io/getonline.txt");
-xhr.send(); 
 
 
  
@@ -60,21 +51,15 @@ io.on('connection', (socket) => {
     //listen on new_message
     socket.on('msg', (ddata) => {
         //broadcast the new message
-        io.sockets.emit('msg', {cmd : ddata.cmd});
+        io.sockets.emit('msg', {cmd : ddata.cmd},{data: ddata.data});
 	    console.log(`cmd= ${ddata.cmd}`)
 	    
 
 
     })
 	
-socket.on('msg', (ddata) => {
-        //broadcast the new message
-        io.sockets.emit('msg', {data: ddata.data});
-	    console.log(ddata.data)
-	    
-
-
-    })
+	
+	  
     //listen on typing
     socket.on('re', (ddata) => {
     	io.sockets.emit('re', {token : ddata.token})
